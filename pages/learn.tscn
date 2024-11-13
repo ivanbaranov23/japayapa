@@ -1,0 +1,84 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1lefnf0odgm2"]
+
+[ext_resource type="PackedScene" uid="uid://dxkyydoxafs4p" path="res://pages/page_base.tscn" id="1_o2qfo"]
+[ext_resource type="Texture2D" uid="uid://da5418t5tf7ki" path="res://art/box1.png" id="2_4505s"]
+[ext_resource type="Script" path="res://pages/learn.gd" id="2_h3l60"]
+[ext_resource type="StyleBox" uid="uid://ciquw4xpa41gv" path="res://theme/grabber.tres" id="3_iv2mt"]
+[ext_resource type="Texture2D" uid="uid://d35o5madrkxh5" path="res://art/send_button.png" id="5_devm3"]
+[ext_resource type="Texture2D" uid="uid://cvh556mvpkeks" path="res://art/send_button_disabled.png" id="6_g6wqu"]
+
+[node name="learn" instance=ExtResource("1_o2qfo")]
+script = ExtResource("2_h3l60")
+
+[node name="V" parent="." index="0"]
+offset_bottom = -30.0
+
+[node name="G" type="NinePatchRect" parent="V" index="1"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("2_4505s")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="kanji" type="Label" parent="V/G" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.196078, 0.160784, 0.278431, 1)
+theme_override_font_sizes/font_size = 48
+text = "hana"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="id" type="Label" parent="V/G" index="1"]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 20.0
+offset_top = 16.0
+theme_override_colors/font_color = Color(0.196078, 0.160784, 0.278431, 1)
+text = "68"
+
+[node name="P" type="PanelContainer" parent="V" index="2"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_iv2mt")
+
+[node name="prononciation" type="Label" parent="V/P" index="0"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Searching"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="P2" type="PanelContainer" parent="V" index="3"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_iv2mt")
+
+[node name="translation" type="Label" parent="V/P2" index="0"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="next" type="TextureButton" parent="V" index="4"]
+layout_mode = 2
+texture_normal = ExtResource("5_devm3")
+texture_pressed = ExtResource("6_g6wqu")
+stretch_mode = 3
+
+[node name="C" type="Control" parent="V" index="6"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="no_internet" parent="." index="2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[connection signal="pressed" from="V/next" to="." method="_on_next_pressed"]

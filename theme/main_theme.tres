@@ -1,0 +1,43 @@
+[gd_resource type="Theme" load_steps=9 format=3 uid="uid://cy0t75ali8qwt"]
+
+[ext_resource type="FontFile" uid="uid://bbnfno3rgsoou" path="res://theme/NotoSansJP-Regular.ttf" id="1_6mbu3"]
+[ext_resource type="StyleBox" uid="uid://ciquw4xpa41gv" path="res://theme/grabber.tres" id="1_bmcj7"]
+[ext_resource type="Texture2D" uid="uid://vgusukw276wu" path="res://art/panel_dark.png" id="1_n2yx0"]
+[ext_resource type="Texture2D" uid="uid://2cmw3lmh2nx8" path="res://art/right.png" id="2_s2swk"]
+[ext_resource type="Texture2D" uid="uid://c7ercs6c5mfod" path="res://art/left.png" id="3_2ysqv"]
+[ext_resource type="Texture2D" uid="uid://bycaataot0vvp" path="res://art/up.png" id="5_efhox"]
+[ext_resource type="Texture2D" uid="uid://7vntmettolab" path="res://art/down.png" id="6_jsc12"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tcoxd"]
+texture = ExtResource("1_n2yx0")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[resource]
+default_font = ExtResource("1_6mbu3")
+Button/styles/focus = ExtResource("1_bmcj7")
+Button/styles/hover = ExtResource("1_bmcj7")
+Button/styles/normal = ExtResource("1_bmcj7")
+Button/styles/pressed = ExtResource("1_bmcj7")
+HScrollBar/icons/decrement = ExtResource("2_s2swk")
+HScrollBar/icons/decrement_highlight = ExtResource("2_s2swk")
+HScrollBar/icons/decrement_pressed = ExtResource("2_s2swk")
+HScrollBar/icons/increment = ExtResource("3_2ysqv")
+HScrollBar/icons/increment_highlight = ExtResource("3_2ysqv")
+HScrollBar/icons/increment_pressed = ExtResource("3_2ysqv")
+HScrollBar/styles/grabber = ExtResource("1_bmcj7")
+HScrollBar/styles/grabber_highlight = ExtResource("1_bmcj7")
+HScrollBar/styles/grabber_pressed = ExtResource("1_bmcj7")
+Panel/styles/panel = SubResource("StyleBoxTexture_tcoxd")
+Panel/styles/panel2 = null
+VScrollBar/icons/decrement = ExtResource("5_efhox")
+VScrollBar/icons/decrement_highlight = ExtResource("5_efhox")
+VScrollBar/icons/decrement_pressed = ExtResource("5_efhox")
+VScrollBar/icons/increment = ExtResource("6_jsc12")
+VScrollBar/icons/increment_highlight = ExtResource("6_jsc12")
+VScrollBar/icons/increment_pressed = ExtResource("6_jsc12")
+VScrollBar/styles/grabber = ExtResource("1_bmcj7")
+VScrollBar/styles/grabber_highlight = ExtResource("1_bmcj7")
+VScrollBar/styles/grabber_pressed = ExtResource("1_bmcj7")

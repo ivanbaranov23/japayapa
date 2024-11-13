@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://di7sbob1n8hi6"]
+
+[ext_resource type="Script" path="res://questions/answer_checker.gd" id="1_wfk8w"]
+
+[node name="answer_checker" type="Node"]
+script = ExtResource("1_wfk8w")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="response_timer" type="Timer" parent="."]
+wait_time = 4.0
+one_shot = true
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_http_request_request_completed"]
+[connection signal="timeout" from="response_timer" to="." method="_on_response_timer_timeout"]

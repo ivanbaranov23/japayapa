@@ -1,0 +1,308 @@
+[gd_resource type="Resource" script_class="Hitomon_factory" load_steps=145 format=3 uid="uid://6cu1w4xufcv3"]
+
+[ext_resource type="Script" path="res://hitomon/hitomon_factory.gd" id="1_kfkg5"]
+[ext_resource type="Texture2D" uid="uid://tvlefscfhd1o" path="res://art/hitomon/body/butterfly.png" id="2_7j7ye"]
+[ext_resource type="Texture2D" uid="uid://1y7srqo7myut" path="res://art/hitomon/body/cb_grad.png" id="3_qbpfb"]
+[ext_resource type="Texture2D" uid="uid://0a1ffxs534l7" path="res://art/hitomon/body/cheese1.png" id="4_7ki4k"]
+[ext_resource type="Texture2D" uid="uid://g8854t117frq" path="res://art/hitomon/body/cheese2.png" id="5_ptleu"]
+[ext_resource type="Texture2D" uid="uid://bc81dl0x1gd1h" path="res://art/hitomon/body/circle.png" id="6_uyckd"]
+[ext_resource type="Texture2D" uid="uid://bvxadj6vta0l3" path="res://art/hitomon/body/cyan.png" id="7_53kki"]
+[ext_resource type="Texture2D" uid="uid://380ygussfd46" path="res://art/hitomon/body/fairy.png" id="8_afx0l"]
+[ext_resource type="Texture2D" uid="uid://boqcytat65srd" path="res://art/hitomon/body/ghost.png" id="9_o0vs4"]
+[ext_resource type="Texture2D" uid="uid://eywy0fmtuxpm" path="res://art/hitomon/body/green.png" id="10_3nkhw"]
+[ext_resource type="Texture2D" uid="uid://db3y8mjy0dtjj" path="res://art/hitomon/body/mummy.png" id="11_fdi1y"]
+[ext_resource type="Texture2D" uid="uid://bmhqaji3mn5tg" path="res://art/hitomon/body/rainbow.png" id="12_rtt8p"]
+[ext_resource type="Texture2D" uid="uid://cvajonp2obcno" path="res://art/hitomon/body/rainbow_smooth.png" id="13_xtuox"]
+[ext_resource type="Texture2D" uid="uid://dp4rfv68a6ttv" path="res://art/hitomon/body/tail1.png" id="14_6ikt2"]
+[ext_resource type="Texture2D" uid="uid://c23yvya57hjr6" path="res://art/hitomon/body/taxido.png" id="15_3060p"]
+[ext_resource type="Texture2D" uid="uid://c3h7k4ibm5q67" path="res://art/hitomon/body/test.png" id="16_e0och"]
+[ext_resource type="Texture2D" uid="uid://dyjdiiaxk6o3v" path="res://art/hitomon/body/tie.png" id="17_h5xmu"]
+[ext_resource type="Texture2D" uid="uid://c5avj6nvpu6ht" path="res://art/hitomon/body/vampire.png" id="18_eixha"]
+[ext_resource type="Texture2D" uid="uid://dg65m4x0qur6c" path="res://art/hitomon/body/yellow.png" id="19_dnb3r"]
+[ext_resource type="Texture2D" uid="uid://cxtnojkesbpcd" path="res://art/hitomon/body/yp_grad.png" id="20_vf4dl"]
+[ext_resource type="Texture2D" uid="uid://krdpi1p8ugyk" path="res://art/hitomon/eyes/allseeing.png" id="21_xgnbs"]
+[ext_resource type="Texture2D" uid="uid://cv3x1rp5bbiwt" path="res://art/hitomon/eyes/blue.png" id="22_u2fmx"]
+[ext_resource type="Texture2D" uid="uid://uw4uie0jdurf" path="res://art/hitomon/eyes/blue_big.png" id="23_apl4k"]
+[ext_resource type="Texture2D" uid="uid://dslfmqnyr02i4" path="res://art/hitomon/eyes/blue_glasses.png" id="24_e7iye"]
+[ext_resource type="Texture2D" uid="uid://y5fep1ulsjs0" path="res://art/hitomon/eyes/blush.png" id="25_ar7pf"]
+[ext_resource type="Texture2D" uid="uid://cw5723cyfels0" path="res://art/hitomon/eyes/brown.png" id="26_rujre"]
+[ext_resource type="Texture2D" uid="uid://ch7qxv0pibdqw" path="res://art/hitomon/eyes/brows.png" id="27_t83xe"]
+[ext_resource type="Texture2D" uid="uid://cgphwixq20ub6" path="res://art/hitomon/eyes/cat1.png" id="28_a7rp5"]
+[ext_resource type="Texture2D" uid="uid://jm1mkgfg45d1" path="res://art/hitomon/eyes/cat2.png" id="29_arwiy"]
+[ext_resource type="Texture2D" uid="uid://53k3vv5giqwh" path="res://art/hitomon/eyes/cat3.png" id="30_ptdhj"]
+[ext_resource type="Texture2D" uid="uid://xl7onl6p2bre" path="res://art/hitomon/eyes/confused.png" id="31_twjwa"]
+[ext_resource type="Texture2D" uid="uid://bwitieb5e8owb" path="res://art/hitomon/eyes/crtbtn.png" id="32_g3q0x"]
+[ext_resource type="Texture2D" uid="uid://cqrk4ohh7nfj5" path="res://art/hitomon/eyes/green.png" id="33_nayg2"]
+[ext_resource type="Texture2D" uid="uid://cpvfonwv2f88t" path="res://art/hitomon/eyes/green_big.png" id="34_8b04f"]
+[ext_resource type="Texture2D" uid="uid://c06iif8see3su" path="res://art/hitomon/eyes/herobrine.png" id="35_eujfw"]
+[ext_resource type="Texture2D" uid="uid://d0ameolypxwo8" path="res://art/hitomon/eyes/huh.png" id="36_pncbt"]
+[ext_resource type="Texture2D" uid="uid://e1qvyy3vuos6" path="res://art/hitomon/eyes/mask.png" id="37_h8lj0"]
+[ext_resource type="Texture2D" uid="uid://bjholl7ikgc7o" path="res://art/hitomon/eyes/money_glasses.png" id="38_xuagd"]
+[ext_resource type="Texture2D" uid="uid://c7vi31wneapsc" path="res://art/hitomon/eyes/muffet.png" id="39_fmvpu"]
+[ext_resource type="Texture2D" uid="uid://bbiwftem426p2" path="res://art/hitomon/eyes/purple.png" id="40_qrrst"]
+[ext_resource type="Texture2D" uid="uid://dg8rboweiwhfi" path="res://art/hitomon/eyes/purple_big.png" id="41_ubkd7"]
+[ext_resource type="Texture2D" uid="uid://dwsuy7teiou62" path="res://art/hitomon/eyes/red.png" id="42_dplmd"]
+[ext_resource type="Texture2D" uid="uid://k3ib80fl7x3k" path="res://art/hitomon/eyes/roblox.png" id="43_idlcw"]
+[ext_resource type="Texture2D" uid="uid://cbaw1kjuqd5kt" path="res://art/hitomon/eyes/scar.png" id="44_4qpmd"]
+[ext_resource type="Texture2D" uid="uid://bj00kkqmlgby6" path="res://art/hitomon/eyes/slay1.png" id="45_qd368"]
+[ext_resource type="Texture2D" uid="uid://spf3prg855e3" path="res://art/hitomon/eyes/stalks.png" id="46_0bokc"]
+[ext_resource type="Texture2D" uid="uid://dlyxf3bv0t31f" path="res://art/hitomon/eyes/test.png" id="47_g4qof"]
+[ext_resource type="Texture2D" uid="uid://c6gviftxpu4ho" path="res://art/hitomon/eyes/tired.png" id="48_qahlk"]
+[ext_resource type="Texture2D" uid="uid://qew8t3n5us8o" path="res://art/hitomon/eyes/toomany.png" id="49_vf5sy"]
+[ext_resource type="Texture2D" uid="uid://d188gq50nhvrd" path="res://art/hitomon/eyes/vampire.png" id="50_46qnd"]
+[ext_resource type="Texture2D" uid="uid://dnm0wjwiggxm0" path="res://art/hitomon/eyes/vertical.png" id="51_xhfqf"]
+[ext_resource type="Texture2D" uid="uid://byfjhgvi6cdbk" path="res://art/hitomon/eyes/visor.png" id="52_213ua"]
+[ext_resource type="Texture2D" uid="uid://c77jcsvjh3yi6" path="res://art/hitomon/eyes/xx.png" id="53_b0vm3"]
+[ext_resource type="Texture2D" uid="uid://d3o2vmjd6lv1o" path="res://art/hitomon/eyes/yellow_glasses.png" id="54_kxah2"]
+[ext_resource type="Texture2D" uid="uid://cm633pyy7jk0o" path="res://art/hitomon/nose/big.png" id="55_om0hb"]
+[ext_resource type="Texture2D" uid="uid://xs6aqrv3y0ol" path="res://art/hitomon/nose/clown.png" id="56_sywd2"]
+[ext_resource type="Texture2D" uid="uid://bpo8o2fi5har8" path="res://art/hitomon/nose/cyan.png" id="57_j7tkt"]
+[ext_resource type="Texture2D" uid="uid://beqrde6r2djln" path="res://art/hitomon/nose/dsffgdsfd.png" id="58_gktvo"]
+[ext_resource type="Texture2D" uid="uid://bwu3uyb5h6xll" path="res://art/hitomon/nose/long.png" id="59_lojoy"]
+[ext_resource type="Texture2D" uid="uid://c0wr76mfyi6f0" path="res://art/hitomon/nose/test.png" id="60_1wcq1"]
+[ext_resource type="Texture2D" uid="uid://bt4yg8nraf7so" path="res://art/hitomon/nose/trunk.png" id="61_le4hc"]
+[ext_resource type="Texture2D" uid="uid://pnabpst225kc" path="res://art/hitomon/mouth/beard.png" id="62_ju8hg"]
+[ext_resource type="Texture2D" uid="uid://c3vje7xosppdv" path="res://art/hitomon/mouth/blue_mustache.png" id="63_ow8h3"]
+[ext_resource type="Texture2D" uid="uid://ddkahaubq4o77" path="res://art/hitomon/mouth/cheeks.png" id="64_gshcs"]
+[ext_resource type="Texture2D" uid="uid://dqim2qf3dj7ns" path="res://art/hitomon/mouth/grey_beard.png" id="65_deikp"]
+[ext_resource type="Texture2D" uid="uid://bxhf66dxjqfbp" path="res://art/hitomon/mouth/grey_mustache.png" id="66_3wjyi"]
+[ext_resource type="Texture2D" uid="uid://coerdhe5ahqv8" path="res://art/hitomon/mouth/mustache.png" id="67_yxlsh"]
+[ext_resource type="Texture2D" uid="uid://drhayrr43f4g4" path="res://art/hitomon/mouth/roblox.png" id="68_aa61e"]
+[ext_resource type="Texture2D" uid="uid://chiuhodg6dmt4" path="res://art/hitomon/mouth/sad.png" id="69_lk1er"]
+[ext_resource type="Texture2D" uid="uid://dga1tjnaedapn" path="res://art/hitomon/mouth/small_smile.png" id="70_lv4jn"]
+[ext_resource type="Texture2D" uid="uid://rw14f7gijlvb" path="res://art/hitomon/mouth/smile.png" id="71_5dn6w"]
+[ext_resource type="Texture2D" uid="uid://bew7all7sa3ei" path="res://art/hitomon/mouth/test.png" id="72_wdjrw"]
+[ext_resource type="Texture2D" uid="uid://h8ow5wnb1t5x" path="res://art/hitomon/mouth/tongue1.png" id="73_d51b6"]
+[ext_resource type="Texture2D" uid="uid://c74t5bjx2gby3" path="res://art/hitomon/mouth/tongue2.png" id="74_ry7fj"]
+[ext_resource type="Texture2D" uid="uid://sossqe6mt6yp" path="res://art/hitomon/mouth/worry.png" id="75_6j88l"]
+[ext_resource type="Texture2D" uid="uid://dr48424y2u86k" path="res://art/hitomon/hat/antena1.png" id="76_dt5ua"]
+[ext_resource type="Texture2D" uid="uid://cept5s300klvi" path="res://art/hitomon/hat/arrow.png" id="77_o3p8e"]
+[ext_resource type="Texture2D" uid="uid://boebviwidb3pw" path="res://art/hitomon/hat/arrow2.png" id="78_xwv45"]
+[ext_resource type="Texture2D" uid="uid://b0e768y2yh17m" path="res://art/hitomon/hat/baseball.png" id="79_534nq"]
+[ext_resource type="Texture2D" uid="uid://c7j7bt4w75qly" path="res://art/hitomon/hat/big_tv.png" id="80_0laop"]
+[ext_resource type="Texture2D" uid="uid://2bekvkixqjj0" path="res://art/hitomon/hat/bucket.png" id="81_2g0y6"]
+[ext_resource type="Texture2D" uid="uid://yolmcly6m6v3" path="res://art/hitomon/hat/cat.png" id="82_qj5d8"]
+[ext_resource type="Texture2D" uid="uid://by36x4pk7sx2i" path="res://art/hitomon/hat/cheeese.png" id="83_ayva8"]
+[ext_resource type="Texture2D" uid="uid://2f08sc7y55dr" path="res://art/hitomon/hat/chef.png" id="84_i76mf"]
+[ext_resource type="Texture2D" uid="uid://dt3jamguxfjff" path="res://art/hitomon/hat/clock.png" id="85_wka7s"]
+[ext_resource type="Texture2D" uid="uid://lbtdsmyppbe7" path="res://art/hitomon/hat/clown.png" id="86_2wlpq"]
+[ext_resource type="Texture2D" uid="uid://cmnisnjynhhmn" path="res://art/hitomon/hat/cowboy.png" id="87_133ol"]
+[ext_resource type="Texture2D" uid="uid://cjvxuufo18yw0" path="res://art/hitomon/hat/cowboy2.png" id="88_sv4j0"]
+[ext_resource type="Texture2D" uid="uid://dekn1ba3gfixp" path="res://art/hitomon/hat/elvis.png" id="89_57gdp"]
+[ext_resource type="Texture2D" uid="uid://conjen0rq183p" path="res://art/hitomon/hat/fedora.png" id="90_uxyfh"]
+[ext_resource type="Texture2D" uid="uid://wuvn8tmf24qx" path="res://art/hitomon/hat/fez.png" id="91_tcx2f"]
+[ext_resource type="Texture2D" uid="uid://whux57028dd7" path="res://art/hitomon/hat/flamingo.png" id="92_c00s5"]
+[ext_resource type="Texture2D" uid="uid://fls8qygfrj21" path="res://art/hitomon/hat/flower.png" id="93_506tt"]
+[ext_resource type="Texture2D" uid="uid://bhtme8gy2bebb" path="res://art/hitomon/hat/graduation.png" id="94_6y1tt"]
+[ext_resource type="Texture2D" uid="uid://dykdo13sxtc1u" path="res://art/hitomon/hat/horns1.png" id="95_bt6gs"]
+[ext_resource type="Texture2D" uid="uid://c70n7ca21fskg" path="res://art/hitomon/hat/mushroom.png" id="96_w0qty"]
+[ext_resource type="Texture2D" uid="uid://ots0gkuqfqqt" path="res://art/hitomon/hat/party.png" id="97_xl4ih"]
+[ext_resource type="Texture2D" uid="uid://doc083aad5f5w" path="res://art/hitomon/hat/rabbit.png" id="98_kdxti"]
+[ext_resource type="Texture2D" uid="uid://dq8tw77apeeuw" path="res://art/hitomon/hat/rat.png" id="99_8bbf8"]
+[ext_resource type="Texture2D" uid="uid://c3cji14gn0yxn" path="res://art/hitomon/hat/stacked.png" id="100_7sqvp"]
+[ext_resource type="Texture2D" uid="uid://g042m671frje" path="res://art/hitomon/hat/test.png" id="101_rgp4l"]
+[ext_resource type="Texture2D" uid="uid://cnkrtaiw5uxsi" path="res://art/hitomon/hat/tophat.png" id="102_deeow"]
+[ext_resource type="Texture2D" uid="uid://cmre6l7en1kcr" path="res://art/hitomon/hat/tophat2.png" id="103_yfw8q"]
+[ext_resource type="Texture2D" uid="uid://cwoxf7tm82tkl" path="res://art/hitomon/hat/tophat3.png" id="104_ydau5"]
+[ext_resource type="Texture2D" uid="uid://b7wftibdaks12" path="res://art/hitomon/hat/tv.png" id="105_ct4r1"]
+[ext_resource type="Texture2D" uid="uid://6wf7xpiute00" path="res://art/hitomon/hat/viking.png" id="106_7jlpc"]
+[ext_resource type="Texture2D" uid="uid://b6eppa7j1epc2" path="res://art/hitomon/hat/witch1.png" id="107_bxsxh"]
+[ext_resource type="Texture2D" uid="uid://dnwbxx2imqkqo" path="res://art/hitomon/hat/witch2.png" id="108_6x2w0"]
+[ext_resource type="Texture2D" uid="uid://delvfdwoffsg3" path="res://art/hitomon/hat/witch3.png" id="109_8cbce"]
+[ext_resource type="Texture2D" uid="uid://dsxpjmvur3b55" path="res://art/hitomon/arm/cyan.png" id="110_cv40c"]
+[ext_resource type="Texture2D" uid="uid://cg6wi8in5f2ms" path="res://art/hitomon/arm/double.png" id="111_hikfk"]
+[ext_resource type="Texture2D" uid="uid://5gaus5fwy3a6" path="res://art/hitomon/arm/flower1.png" id="112_l7age"]
+[ext_resource type="Texture2D" uid="uid://c2smigy2ab3ew" path="res://art/hitomon/arm/ghost.png" id="113_v6r5c"]
+[ext_resource type="Texture2D" uid="uid://c8okdrv58q8qe" path="res://art/hitomon/arm/green.png" id="114_2nuue"]
+[ext_resource type="Texture2D" uid="uid://bh7gridgsr0a0" path="res://art/hitomon/arm/hand.png" id="115_sithh"]
+[ext_resource type="Texture2D" uid="uid://bl6hwngfkhdvx" path="res://art/hitomon/arm/hook.png" id="116_1y67f"]
+[ext_resource type="Texture2D" uid="uid://c13ya1mgsu1dd" path="res://art/hitomon/arm/long.png" id="117_ak5kj"]
+[ext_resource type="Texture2D" uid="uid://p5gxgbomifbu" path="res://art/hitomon/arm/mummy.png" id="118_65g4i"]
+[ext_resource type="Texture2D" uid="uid://dhgmjjn2hdlj6" path="res://art/hitomon/arm/muscle.png" id="119_py3s8"]
+[ext_resource type="Texture2D" uid="uid://df0j2s3en43dc" path="res://art/hitomon/arm/pick.png" id="120_s3nym"]
+[ext_resource type="Texture2D" uid="uid://sxwf0m5lsbph" path="res://art/hitomon/arm/pistol.png" id="121_n0qox"]
+[ext_resource type="Texture2D" uid="uid://cmkdvn5vjtklt" path="res://art/hitomon/arm/robot.png" id="122_rmj1t"]
+[ext_resource type="Texture2D" uid="uid://nt05yb5r7wj" path="res://art/hitomon/arm/shovel.png" id="123_3vgl4"]
+[ext_resource type="Texture2D" uid="uid://dly4cav770bni" path="res://art/hitomon/arm/test.png" id="124_rhwoa"]
+[ext_resource type="Texture2D" uid="uid://34840bsvoc6c" path="res://art/hitomon/arm/wrench.png" id="125_5cpa7"]
+[ext_resource type="Texture2D" uid="uid://b1savt8cqcmft" path="res://art/hitomon/arm/yellow.png" id="126_vtb1o"]
+[ext_resource type="Texture2D" uid="uid://brd0yrwra2cap" path="res://art/hitomon/leg/back.png" id="127_btjw8"]
+[ext_resource type="Texture2D" uid="uid://8qda37svof" path="res://art/hitomon/leg/bare.png" id="128_7wqni"]
+[ext_resource type="Texture2D" uid="uid://4mwnil6kx2pv" path="res://art/hitomon/leg/boots.png" id="129_lyk12"]
+[ext_resource type="Texture2D" uid="uid://cj6mqnb4mpn16" path="res://art/hitomon/leg/clown.png" id="130_kcwae"]
+[ext_resource type="Texture2D" uid="uid://dhfrj1k1ihfye" path="res://art/hitomon/leg/cyan.png" id="131_5e7ah"]
+[ext_resource type="Texture2D" uid="uid://drrpptawj4x3e" path="res://art/hitomon/leg/ghost.png" id="132_nde3b"]
+[ext_resource type="Texture2D" uid="uid://dqb02weapkgd7" path="res://art/hitomon/leg/green.png" id="133_okkjo"]
+[ext_resource type="Texture2D" uid="uid://cww650svo1t00" path="res://art/hitomon/leg/heels.png" id="134_hvtu5"]
+[ext_resource type="Texture2D" uid="uid://cis8q5pl43v22" path="res://art/hitomon/leg/high_heels.png" id="135_kd3md"]
+[ext_resource type="Texture2D" uid="uid://dooujt2fjp3kp" path="res://art/hitomon/leg/mummy.png" id="136_m8e5c"]
+[ext_resource type="Texture2D" uid="uid://do7s6xg71tog8" path="res://art/hitomon/leg/peg.png" id="137_m6i6n"]
+[ext_resource type="Texture2D" uid="uid://bj1f2ykctxgx" path="res://art/hitomon/leg/robot.png" id="138_ra4fy"]
+[ext_resource type="Texture2D" uid="uid://bf3xm7ihps8ob" path="res://art/hitomon/leg/rollers.png" id="139_d1il8"]
+[ext_resource type="Texture2D" uid="uid://bghm1kyxv7w0" path="res://art/hitomon/leg/tall_boots.png" id="140_4dwuv"]
+[ext_resource type="Texture2D" uid="uid://djqbpmjf13dwd" path="res://art/hitomon/leg/test.png" id="141_qs8ta"]
+[ext_resource type="Texture2D" uid="uid://dhqcvxtpx2vgi" path="res://art/hitomon/leg/thin.png" id="142_qmkju"]
+[ext_resource type="Texture2D" uid="uid://mi30jlajurs0" path="res://art/hitomon/leg/wide.png" id="143_7tujg"]
+[ext_resource type="Texture2D" uid="uid://b7bflqxyxtd4b" path="res://art/hitomon/leg/yellow.png" id="144_bpb8s"]
+
+[resource]
+script = ExtResource("1_kfkg5")
+textures = {
+"arm": {
+"cyan.png": ExtResource("110_cv40c"),
+"double.png": ExtResource("111_hikfk"),
+"flower1.png": ExtResource("112_l7age"),
+"ghost.png": ExtResource("113_v6r5c"),
+"green.png": ExtResource("114_2nuue"),
+"hand.png": ExtResource("115_sithh"),
+"hook.png": ExtResource("116_1y67f"),
+"long.png": ExtResource("117_ak5kj"),
+"mummy.png": ExtResource("118_65g4i"),
+"muscle.png": ExtResource("119_py3s8"),
+"pick.png": ExtResource("120_s3nym"),
+"pistol.png": ExtResource("121_n0qox"),
+"robot.png": ExtResource("122_rmj1t"),
+"shovel.png": ExtResource("123_3vgl4"),
+"test.png": ExtResource("124_rhwoa"),
+"wrench.png": ExtResource("125_5cpa7"),
+"yellow.png": ExtResource("126_vtb1o")
+},
+"body": {
+"butterfly.png": ExtResource("2_7j7ye"),
+"cb_grad.png": ExtResource("3_qbpfb"),
+"cheese1.png": ExtResource("4_7ki4k"),
+"cheese2.png": ExtResource("5_ptleu"),
+"circle.png": ExtResource("6_uyckd"),
+"cyan.png": ExtResource("7_53kki"),
+"fairy.png": ExtResource("8_afx0l"),
+"ghost.png": ExtResource("9_o0vs4"),
+"green.png": ExtResource("10_3nkhw"),
+"mummy.png": ExtResource("11_fdi1y"),
+"rainbow.png": ExtResource("12_rtt8p"),
+"rainbow_smooth.png": ExtResource("13_xtuox"),
+"tail1.png": ExtResource("14_6ikt2"),
+"taxido.png": ExtResource("15_3060p"),
+"test.png": ExtResource("16_e0och"),
+"tie.png": ExtResource("17_h5xmu"),
+"vampire.png": ExtResource("18_eixha"),
+"yellow.png": ExtResource("19_dnb3r"),
+"yp_grad.png": ExtResource("20_vf4dl")
+},
+"eyes": {
+"allseeing.png": ExtResource("21_xgnbs"),
+"blue.png": ExtResource("22_u2fmx"),
+"blue_big.png": ExtResource("23_apl4k"),
+"blue_glasses.png": ExtResource("24_e7iye"),
+"blush.png": ExtResource("25_ar7pf"),
+"brown.png": ExtResource("26_rujre"),
+"brows.png": ExtResource("27_t83xe"),
+"cat1.png": ExtResource("28_a7rp5"),
+"cat2.png": ExtResource("29_arwiy"),
+"cat3.png": ExtResource("30_ptdhj"),
+"confused.png": ExtResource("31_twjwa"),
+"crtbtn.png": ExtResource("32_g3q0x"),
+"green.png": ExtResource("33_nayg2"),
+"green_big.png": ExtResource("34_8b04f"),
+"herobrine.png": ExtResource("35_eujfw"),
+"huh.png": ExtResource("36_pncbt"),
+"mask.png": ExtResource("37_h8lj0"),
+"money_glasses.png": ExtResource("38_xuagd"),
+"muffet.png": ExtResource("39_fmvpu"),
+"purple.png": ExtResource("40_qrrst"),
+"purple_big.png": ExtResource("41_ubkd7"),
+"red.png": ExtResource("42_dplmd"),
+"roblox.png": ExtResource("43_idlcw"),
+"scar.png": ExtResource("44_4qpmd"),
+"slay1.png": ExtResource("45_qd368"),
+"stalks.png": ExtResource("46_0bokc"),
+"test.png": ExtResource("47_g4qof"),
+"tired.png": ExtResource("48_qahlk"),
+"toomany.png": ExtResource("49_vf5sy"),
+"vampire.png": ExtResource("50_46qnd"),
+"vertical.png": ExtResource("51_xhfqf"),
+"visor.png": ExtResource("52_213ua"),
+"xx.png": ExtResource("53_b0vm3"),
+"yellow_glasses.png": ExtResource("54_kxah2")
+},
+"hat": {
+"antena1.png": ExtResource("76_dt5ua"),
+"arrow.png": ExtResource("77_o3p8e"),
+"arrow2.png": ExtResource("78_xwv45"),
+"baseball.png": ExtResource("79_534nq"),
+"big_tv.png": ExtResource("80_0laop"),
+"bucket.png": ExtResource("81_2g0y6"),
+"cat.png": ExtResource("82_qj5d8"),
+"cheeese.png": ExtResource("83_ayva8"),
+"chef.png": ExtResource("84_i76mf"),
+"clock.png": ExtResource("85_wka7s"),
+"clown.png": ExtResource("86_2wlpq"),
+"cowboy.png": ExtResource("87_133ol"),
+"cowboy2.png": ExtResource("88_sv4j0"),
+"elvis.png": ExtResource("89_57gdp"),
+"fedora.png": ExtResource("90_uxyfh"),
+"fez.png": ExtResource("91_tcx2f"),
+"flamingo.png": ExtResource("92_c00s5"),
+"flower.png": ExtResource("93_506tt"),
+"graduation.png": ExtResource("94_6y1tt"),
+"horns1.png": ExtResource("95_bt6gs"),
+"mushroom.png": ExtResource("96_w0qty"),
+"party.png": ExtResource("97_xl4ih"),
+"rabbit.png": ExtResource("98_kdxti"),
+"rat.png": ExtResource("99_8bbf8"),
+"stacked.png": ExtResource("100_7sqvp"),
+"test.png": ExtResource("101_rgp4l"),
+"tophat.png": ExtResource("102_deeow"),
+"tophat2.png": ExtResource("103_yfw8q"),
+"tophat3.png": ExtResource("104_ydau5"),
+"tv.png": ExtResource("105_ct4r1"),
+"viking.png": ExtResource("106_7jlpc"),
+"witch1.png": ExtResource("107_bxsxh"),
+"witch2.png": ExtResource("108_6x2w0"),
+"witch3.png": ExtResource("109_8cbce")
+},
+"leg": {
+"back.png": ExtResource("127_btjw8"),
+"bare.png": ExtResource("128_7wqni"),
+"boots.png": ExtResource("129_lyk12"),
+"clown.png": ExtResource("130_kcwae"),
+"cyan.png": ExtResource("131_5e7ah"),
+"ghost.png": ExtResource("132_nde3b"),
+"green.png": ExtResource("133_okkjo"),
+"heels.png": ExtResource("134_hvtu5"),
+"high_heels.png": ExtResource("135_kd3md"),
+"mummy.png": ExtResource("136_m8e5c"),
+"peg.png": ExtResource("137_m6i6n"),
+"robot.png": ExtResource("138_ra4fy"),
+"rollers.png": ExtResource("139_d1il8"),
+"tall_boots.png": ExtResource("140_4dwuv"),
+"test.png": ExtResource("141_qs8ta"),
+"thin.png": ExtResource("142_qmkju"),
+"wide.png": ExtResource("143_7tujg"),
+"yellow.png": ExtResource("144_bpb8s")
+},
+"mouth": {
+"beard.png": ExtResource("62_ju8hg"),
+"blue_mustache.png": ExtResource("63_ow8h3"),
+"cheeks.png": ExtResource("64_gshcs"),
+"grey_beard.png": ExtResource("65_deikp"),
+"grey_mustache.png": ExtResource("66_3wjyi"),
+"mustache.png": ExtResource("67_yxlsh"),
+"roblox.png": ExtResource("68_aa61e"),
+"sad.png": ExtResource("69_lk1er"),
+"small_smile.png": ExtResource("70_lv4jn"),
+"smile.png": ExtResource("71_5dn6w"),
+"test.png": ExtResource("72_wdjrw"),
+"tongue1.png": ExtResource("73_d51b6"),
+"tongue2.png": ExtResource("74_ry7fj"),
+"worry.png": ExtResource("75_6j88l")
+},
+"nose": {
+"big.png": ExtResource("55_om0hb"),
+"clown.png": ExtResource("56_sywd2"),
+"cyan.png": ExtResource("57_j7tkt"),
+"dsffgdsfd.png": ExtResource("58_gktvo"),
+"long.png": ExtResource("59_lojoy"),
+"test.png": ExtResource("60_1wcq1"),
+"trunk.png": ExtResource("61_le4hc")
+}
+}

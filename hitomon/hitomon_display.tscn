@@ -1,0 +1,107 @@
+[gd_scene load_steps=5 format=3 uid="uid://whwkga6we4sh"]
+
+[ext_resource type="Texture2D" uid="uid://c5aw5iy447wmh" path="res://art/return_button.png" id="1_40djt"]
+[ext_resource type="Script" path="res://hitomon/hitomon_display.gd" id="1_uh5nj"]
+[ext_resource type="PackedScene" uid="uid://beimra346cxjp" path="res://hitomon/hitomon_field.tscn" id="2_8hut1"]
+[ext_resource type="Texture2D" uid="uid://4a6k1xv7kmbh" path="res://art/add_button.png" id="4_2goix"]
+
+[node name="Hitomon_display" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uh5nj")
+
+[node name="V" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="H1" type="HBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="return" type="TextureButton" parent="V/H1"]
+z_index = 50
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("1_40djt")
+
+[node name="P" type="Panel" parent="V/H1"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="coins" type="Label" parent="V/H1/P"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="C1" type="Control" parent="V"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+
+[node name="Hbar" type="HScrollBar" parent="V/C1"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 1
+max_value = 900.0
+value = 200.0
+custom_step = 50.0
+
+[node name="Hitomon_field" parent="V/C1/Hbar" instance=ExtResource("2_8hut1")]
+position = Vector2(0, -656)
+scale = Vector2(1.5, 1.5)
+extend = Vector2(600, 413.333)
+
+[node name="H2" type="HBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="add" type="TextureButton" parent="V/H2"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_2goix")
+stretch_mode = 3
+
+[node name="Panel" type="Panel" parent="V/H2"]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+
+[node name="cost" type="Label" parent="V/H2/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="V/H2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[connection signal="pressed" from="V/H1/return" to="." method="_on_return_pressed"]
+[connection signal="scrolling" from="V/C1/Hbar" to="." method="_on_hbar_scrolling"]
+[connection signal="pressed" from="V/H2/add" to="." method="_on_add_pressed"]

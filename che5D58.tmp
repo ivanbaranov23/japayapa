@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cilqbi62wjp4"]
+
+[ext_resource type="Script" path="res://check.gd" id="1_vkh71"]
+[ext_resource type="PackedScene" uid="uid://di7sbob1n8hi6" path="res://questions/answer_checker.tscn" id="2_ceswv"]
+
+[node name="check" type="Node"]
+script = ExtResource("1_vkh71")
+
+[node name="answer_checker" parent="." instance=ExtResource("2_ceswv")]

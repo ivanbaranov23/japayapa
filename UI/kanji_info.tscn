@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://2ogh0fb5326i"]
+
+[ext_resource type="Script" path="res://UI/kanji_info.gd" id="2_aailu"]
+[ext_resource type="PackedScene" uid="uid://di7sbob1n8hi6" path="res://questions/answer_checker.tscn" id="3_0f10c"]
+
+[node name="kanji_info" type="ScrollContainer"]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("2_aailu")
+
+[node name="V" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="kanji" type="Label" parent="V"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 1
+
+[node name="kana" type="VBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="kana_word" type="Label" parent="V/kana"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Kana"
+horizontal_alignment = 1
+
+[node name="kana" type="Label" parent="V/kana"]
+modulate = Color(0.74978, 0.74978, 0.74978, 1)
+layout_mode = 2
+
+[node name="romanji" type="Label" parent="V/kana"]
+modulate = Color(0.74978, 0.74978, 0.74978, 1)
+layout_mode = 2
+
+[node name="translation" type="VBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="V/translation"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Common translations"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="translation2" type="VBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="title" type="Label" parent="V/translation2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "All translations"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="answer_checker" parent="." instance=ExtResource("3_0f10c")]
+all_info = true

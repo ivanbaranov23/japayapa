@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://drvtwoe0l1qcj"]
+
+[ext_resource type="Script" path="res://UI/config_scene.gd" id="1_ifgug"]
+[ext_resource type="PackedScene" uid="uid://ntpxhvk76ce7" path="res://UI/return_button.tscn" id="1_t63dt"]
+[ext_resource type="StyleBox" uid="uid://ciquw4xpa41gv" path="res://theme/grabber.tres" id="3_elo0i"]
+
+[node name="config_scene" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ifgug")
+
+[node name="V" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="return_button" parent="V" instance=ExtResource("1_t63dt")]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="Panel" type="PanelContainer" parent="V/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_elo0i")
+
+[node name="Label" type="Label" parent="V/HBoxContainer/Panel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "commonality factor"
+
+[node name="commonality" type="HSlider" parent="V/HBoxContainer"]
+custom_minimum_size = Vector2(80, 48)
+layout_mode = 2
+min_value = 1.0
+step = 0.1
+value = 1.0
+
+[node name="button1" type="Button" parent="V"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "reset progress"
+alignment = 0
+
+[node name="button2" type="Button" parent="V"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "reset unfound kanji"
+alignment = 0
+
+[node name="button3" type="Button" parent="V"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "reset hitomon"
+alignment = 0
+
+[node name="button4" type="Button" parent="V"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "reset unfound kanji"
+alignment = 0
+
+[connection signal="value_changed" from="V/HBoxContainer/commonality" to="." method="_on_commonality_value_changed"]
+[connection signal="pressed" from="V/button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="V/button2" to="." method="_on_button_2_pressed"]

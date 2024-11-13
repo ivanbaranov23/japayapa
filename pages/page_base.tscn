@@ -1,0 +1,125 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxkyydoxafs4p"]
+
+[ext_resource type="PackedScene" uid="uid://ntpxhvk76ce7" path="res://UI/return_button.tscn" id="1_72q30"]
+[ext_resource type="Script" path="res://pages/page_base.gd" id="1_swhhy"]
+[ext_resource type="StyleBox" uid="uid://ciquw4xpa41gv" path="res://theme/grabber.tres" id="2_0tdce"]
+[ext_resource type="Texture2D" uid="uid://b8uoi5egjqjg3" path="res://art/info_button.png" id="3_5deek"]
+[ext_resource type="PackedScene" uid="uid://2ogh0fb5326i" path="res://UI/kanji_info.tscn" id="5_ex8ml"]
+[ext_resource type="PackedScene" uid="uid://beimra346cxjp" path="res://hitomon/hitomon_field.tscn" id="5_wdtr8"]
+
+[node name="page_base" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_swhhy")
+
+[node name="V" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hitomon_field" parent="V" instance=ExtResource("5_wdtr8")]
+
+[node name="H" type="HBoxContainer" parent="V"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="return_button" parent="V/H" instance=ExtResource("1_72q30")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="stat" type="Label" parent="V/H"]
+layout_mode = 2
+text = "r 1, s 1, c 0"
+horizontal_alignment = 1
+
+[node name="P" type="PanelContainer" parent="V/H"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("2_0tdce")
+
+[node name="coins" type="Label" parent="V/H/P"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="info" type="TextureButton" parent="V"]
+layout_mode = 2
+texture_normal = ExtResource("3_5deek")
+stretch_mode = 3
+
+[node name="PopupPanel" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchor_left = 0.1
+anchor_top = 0.2
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="PanelContainer" parent="PopupPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+theme_override_styles/panel = ExtResource("2_0tdce")
+
+[node name="kanji_info" parent="PopupPanel/Control" instance=ExtResource("5_ex8ml")]
+layout_mode = 2
+
+[node name="no_internet" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = 50.0
+offset_right = -50.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="no_internet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="no_internet/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 56
+text = "Failed 
+to
+connect 
+to
+server"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="V/info" to="." method="_on_info_pressed"]
+[connection signal="gui_input" from="PopupPanel" to="." method="_on_popup_panel_gui_input"]

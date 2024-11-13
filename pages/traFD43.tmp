@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://gsqjt4tbynmx"]
+
+[ext_resource type="PackedScene" uid="uid://cx7m0j82ombfr" path="res://pages/question_base.tscn" id="1_kgdem"]
+[ext_resource type="Texture2D" uid="uid://b20jrjfyl1kow" path="res://art/box2.png" id="2_halxh"]
+[ext_resource type="Script" path="res://pages/translate.gd" id="2_kgghy"]
+
+[node name="translate" instance=ExtResource("1_kgdem")]
+script = ExtResource("2_kgghy")
+
+[node name="question_type" parent="V/P" index="0"]
+text = "translate"
+
+[node name="T" parent="V" index="2"]
+texture = ExtResource("2_halxh")
+
+[node name="Control" parent="PopupPanel" index="1"]
+offset_right = -8.0
+offset_bottom = -8.0

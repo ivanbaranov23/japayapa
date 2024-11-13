@@ -1,0 +1,171 @@
+[gd_scene load_steps=9 format=3 uid="uid://blg24yebkidst"]
+
+[ext_resource type="Script" path="res://UI/main_menu.gd" id="1_qa7d0"]
+[ext_resource type="Texture2D" uid="uid://dgn326vtk0bcd" path="res://art/start_button.png" id="2_k3qt7"]
+[ext_resource type="Texture2D" uid="uid://tgqjlqgfsxpw" path="res://art/config_button.png" id="2_x4s56"]
+[ext_resource type="StyleBox" uid="uid://ciquw4xpa41gv" path="res://theme/grabber.tres" id="3_2s76q"]
+[ext_resource type="Texture2D" uid="uid://by7lnp5qrx67q" path="res://art/config_button_pressed.png" id="3_c0mkb"]
+[ext_resource type="Texture2D" uid="uid://c04qmdy57lxr3" path="res://art/hitomon_button.png" id="4_vwj4v"]
+[ext_resource type="Texture2D" uid="uid://n7qepukdcmp" path="res://art/hitomon_button_disabled.png" id="5_1ct47"]
+[ext_resource type="Texture2D" uid="uid://c3jd6o17jdqo2" path="res://art/start_button_pressed.png" id="5_smwu8"]
+
+[node name="MainMenu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qa7d0")
+
+[node name="V" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Top" type="HBoxContainer" parent="V"]
+layout_mode = 2
+
+[node name="config" type="TextureButton" parent="V/Top"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("2_x4s56")
+texture_pressed = ExtResource("3_c0mkb")
+texture_hover = ExtResource("2_x4s56")
+
+[node name="hitomon" type="TextureButton" parent="V/Top"]
+layout_mode = 2
+texture_normal = ExtResource("4_vwj4v")
+texture_pressed = ExtResource("5_1ct47")
+
+[node name="start" type="TextureButton" parent="V"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("2_k3qt7")
+texture_pressed = ExtResource("5_smwu8")
+stretch_mode = 3
+
+[node name="P" type="PanelContainer" parent="V"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="Label" type="Label" parent="V/P"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "ready: 100"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="V"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+columns = 4
+
+[node name="1" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/1"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="2" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="3" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="4" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="5" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/5"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="6" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/6"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="7" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/7"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="8" type="PanelContainer" parent="V/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = ExtResource("3_2s76q")
+
+[node name="value" type="Label" parent="V/GridContainer/8"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "1: 00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="V/Top/config" to="." method="_on_config_pressed"]
+[connection signal="pressed" from="V/Top/hitomon" to="." method="_on_hitomon_pressed"]
+[connection signal="pressed" from="V/start" to="." method="_on_start_pressed"]

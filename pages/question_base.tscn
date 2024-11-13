@@ -1,0 +1,91 @@
+[gd_scene load_steps=9 format=3 uid="uid://cx7m0j82ombfr"]
+
+[ext_resource type="PackedScene" uid="uid://dxkyydoxafs4p" path="res://pages/page_base.tscn" id="1_37j0g"]
+[ext_resource type="Script" path="res://pages/question_base.gd" id="2_akaxh"]
+[ext_resource type="StyleBox" uid="uid://ciquw4xpa41gv" path="res://theme/grabber.tres" id="2_pcwxg"]
+[ext_resource type="Texture2D" uid="uid://da5418t5tf7ki" path="res://art/box1.png" id="3_uyqoa"]
+[ext_resource type="Texture2D" uid="uid://d35o5madrkxh5" path="res://art/send_button.png" id="4_qiock"]
+[ext_resource type="AudioStream" uid="uid://d4lgirycm3hsd" path="res://art/correct.wav" id="6_o3n2l"]
+[ext_resource type="Texture2D" uid="uid://cvh556mvpkeks" path="res://art/send_button_disabled.png" id="6_q10w6"]
+[ext_resource type="AudioStream" uid="uid://dqe5dhtr11kwj" path="res://art/incorrect.wav" id="7_gifa1"]
+
+[node name="question_base" instance=ExtResource("1_37j0g")]
+script = ExtResource("2_akaxh")
+
+[node name="V" parent="." index="0"]
+offset_bottom = -30.0
+
+[node name="coins" parent="V/H/P" index="0"]
+text = "69"
+
+[node name="P" type="PanelContainer" parent="V" index="2"]
+layout_mode = 2
+theme_override_styles/panel = ExtResource("2_pcwxg")
+
+[node name="question_type" type="Label" parent="V/P" index="0"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "do a hand stand"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="T" type="NinePatchRect" parent="V" index="3"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("3_uyqoa")
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
+
+[node name="question" type="Label" parent="V/T" index="0"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.196078, 0.160784, 0.278431, 1)
+theme_override_font_sizes/font_size = 56
+text = "エレベーター"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="H2" type="HBoxContainer" parent="V" index="4"]
+layout_mode = 2
+
+[node name="input" type="LineEdit" parent="V/H2" index="0"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "input"
+
+[node name="TextureButton" type="TextureButton" parent="V/H2" index="1"]
+layout_mode = 2
+texture_normal = ExtResource("4_qiock")
+texture_pressed = ExtResource("6_q10w6")
+texture_disabled = ExtResource("6_q10w6")
+
+[node name="BC" type="Control" parent="V" index="5"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="info" parent="V" index="6"]
+modulate = Color(1, 1, 1, 0)
+disabled = true
+
+[node name="correct" type="AudioStreamPlayer" parent="." index="1"]
+stream = ExtResource("6_o3n2l")
+
+[node name="incorrect" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource("7_gifa1")
+volume_db = 2.811
+
+[node name="no_internet" parent="." index="4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
+[connection signal="text_submitted" from="V/H2/input" to="." method="on_text_inputed_changed"]
+[connection signal="pressed" from="V/H2/TextureButton" to="." method="_on_texture_button_pressed"]

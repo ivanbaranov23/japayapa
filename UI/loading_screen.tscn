@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://e1caehnrqgpl"]
+
+[ext_resource type="Script" path="res://UI/loading_screen.gd" id="1_c0bjo"]
+[ext_resource type="Texture2D" uid="uid://bxrfu05kvf332" path="res://art/loading.png" id="2_lbt6q"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tmrfa"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy7r2"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1f2c4"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f5uf"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v2mc"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5phht"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3uju"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6i6q"]
+atlas = ExtResource("2_lbt6q")
+region = Rect2(896, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_phbqc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tmrfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hy7r2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1f2c4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f5uf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7v2mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5phht")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3uju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6i6q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
+[node name="LoadingScreen" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c0bjo")
+
+[node name="C" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="C"]
+sprite_frames = SubResource("SpriteFrames_phbqc")
+autoplay = "default"
+frame_progress = 0.882532
